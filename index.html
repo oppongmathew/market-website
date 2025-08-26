@@ -7,6 +7,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <header>
+    <nav class="navbar">
+      <div class="logo">MyMarket</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="electronics.html">Electronics</a></li>
+        <li><a href="footwears.html">Footwears</a></li>
+        <li><a href="foods.html">Foods</a></li>
+        <li><a href="clothes.html">Clothes</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <!--Hero Section-->
+  <section class="hero">
+    <div class="hero-text"> 
+      <h1>Welcome to MyMarket</h1>
+      <p><b>Your one-stop shop for everything you need</b></p>
+    </div>
+  </section>
+
+  <section class="categories">
+  <h2>Shop by Category</h2>
+  <div class="category-grid">
+    <a href="./electronic.html" class="category-box electronics">
+      <h3>Electronics</h3>
+      <p>Phones, laptops, gadgets & more</p>
+    </a>
+    <a href="./footwear.html" class="category-box footwears">
+      <h3>Footwears</h3>
+      <p>Trendy shoes & sneakers</p>
+    </a>
+    <a href="./food.html" class="category-box foods">
+      <h3>Foods</h3>
+      <p>Fresh groceries & snacks</p>
+    </a>
+    <a href="./cloth.html" class="category-box clothes">
+      <h3>Clothes</h3>
+      <p>Latest fashion styles</p>
+    </a>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 MyMarket. All rights reserved.<br><b>@Rhatty</b></p>
+  </footer>
+
+  <script>
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+
+    // change button icon
+    if (nav.classList.contains("active")) {
+      toggle.textContent = "✖"; 
+    } else {
+      toggle.textContent = "☰"; 
+    }
+  });
+</script>
+
 </body>
 </html>
